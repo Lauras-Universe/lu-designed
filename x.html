@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+    .code-editor {
+      display: flex;
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      font-family: 'Consolas', 'Monaco', monospace;
+      border: 1px solid #3c3c3c;
+      overflow: hidden;
+    }
+
+    .line-numbers {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      background-color: #1e1e1e;
+      color: #858585;
+      text-align: right;
+      padding-right: 10px; /* Beibehaltung des Abstands zwischen Zeilennummern und Code */
+      user-select: none;
+      flex-shrink: 0;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .line-numbers li {
+      height: 21px; /* Angepasst an Zeilenhöhe */
+    }
+
+    .content {
+      margin: 0;
+      padding: 0; /* Entfernt jegliches Padding */
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .content pre {
+      margin: 0; /* Stellt sicher, dass kein Außenabstand vorhanden ist */
+      padding: 0; /* Entfernt jegliches Padding */
+    }
+
+    .content code {
+      display: block;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="code-editor">
+    <ul class="line-numbers"></ul>
+    <pre class="content"><code>
+// Ihr Code beginnt hier
+function meineSkills() {
+  console.log("HTML, CSS, JavaScript, React");
+}
+meineSkills();
+</code></pre>
+      
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const codeContent = document.querySelector('.content code');
+      const lines = codeContent.innerText.split('\n').length; // Zählt die Zeilen
+      const lineNumbers = document.querySelector('.line-numbers');
+
+      for (let i = 1; i <= lines; i++) {
+        const li = document.createElement('li');
+        li.textContent = i;
+        lineNumbers.appendChild(li);
+      }
+    });
+
+  </script>
+</body>
+</html>

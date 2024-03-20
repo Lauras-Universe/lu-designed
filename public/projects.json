@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "titel": "Clubradio Germany",
+    "beschreibung": "Dies ist mein eigenes Radioprojekt.\nErstellt mit HTML, CSS und Vanilla Javascript. Das Design ist nicht selbst erstellt sondern von Codepen. Das Design wurde f&uuml;r meine W&uuml;nsche von mir angepasst.",
+    "bild": "/clubradio-germany.jpg",
+    "link": "https://clubradio-germany.de"
+  }
+]
